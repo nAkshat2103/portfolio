@@ -18,6 +18,7 @@ app.use(cors({
     'https://portfolio-git-main-nakshat2103s-projects.vercel.app',
     'https://portfolio-5k47kgmuk-nakshat2103s-projects.vercel.app'
   ],
+  // TODO: Replace with your actual Vercel URL
   credentials: true
 }));
 
