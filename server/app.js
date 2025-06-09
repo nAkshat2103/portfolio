@@ -14,7 +14,7 @@ var app = express();
 
 // Enable CORS for Vercel frontend
 app.use(cors({
-  origin: 'portfolio-xi-sandy-6ghkwmxtkw.vercel.app', // TODO: Replace with your actual Vercel URL
+  origin: 'https://portfolio-5k47kgmuk-nakshat2103s-projects.vercel.app/', // TODO: Replace with your actual Vercel URL
   credentials: true
 }));
 
