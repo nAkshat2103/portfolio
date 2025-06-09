@@ -1,0 +1,102 @@
+/* client/src/ProjectsPage.css */
+
+.projects-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    color: #f0f0f0; /* Light text for dark background */
+    background-color: #050505; /* Even darker base color */
+    background-image: linear-gradient(180deg, rgba(5, 5, 5, 0.98) 0%, rgba(0, 0, 0, 0.98) 100%); /* Darker gradient */
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.section-title {
+    /* Removed font-family to inherit global font from App.css or index.css */
+    font-size: 2.5rem; /* Matches .name font-size */
+    margin-bottom: 20px; /* Adjusted spacing */
+    color: #ffffff; /* Already pure white, matching .name */
+    /* Removed text-shadow to match .name */
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    max-width: 960px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.project-card {
+    background-color: #1a1a1a; /* Slightly less transparent/darker background */
+    border: 2px solid rgba(74, 158, 255, 0.6); /* Sharper, brighter blue border */
+    border-radius: 12px; /* Increased border-radius for rounded corners */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 15px rgba(74, 158, 255, 0.4), /* More prominent blue glow */
+                0 0 30px rgba(74, 158, 255, 0.2); /* Lighter, diffused glow */
+    transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-color 0.15s ease-in-out; /* Faster animation */
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #4a9eff; /* Even brighter border on hover */
+    box-shadow: 0 0 25px rgba(74, 158, 255, 0.6), /* More intense blue glow on hover */
+                0 0 40px rgba(74, 158, 255, 0.3); /* More diffused glow on hover */
+}
+
+.project-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-name {
+    font-size: 1.3em; /* Reverted to previous size */
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-weight: 700;
+    opacity: 1;
+    text-rendering: optimizeLegibility; /* Added for better text rendering */
+}
+
+.project-description {
+    font-size: 0.85em; /* Reverted to previous size */
+    color: #ffffff;
+    line-height: 1.5; /* Reverted to previous line height */
+    font-weight: 700;
+    opacity: 1;
+    text-rendering: optimizeLegibility; /* Added for better text rendering */
+}
+
+.see-more-button {
+    background: transparent;
+    border: 1px solid #00ffff; /* Bright cyan border */
+    color: #00ffff; /* Bright cyan text */
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.see-more-button:hover {
+    background-color: #00ffff;
+    color: #0d0d0d; /* Dark text on hover */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+} 

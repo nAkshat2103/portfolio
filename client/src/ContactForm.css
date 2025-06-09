@@ -1,0 +1,257 @@
+/* client/src/ContactForm.css */
+
+.contact-form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.contact-form-container {
+    background-color: #1a1a1a; /* Dark background, similar to chatbot */
+    border-radius: 15px;
+    box-shadow: 0 5px 30px rgba(0, 255, 255, 0.6); /* Bright cyan glow */
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact-form-header {
+    background-color: #00cccc; /* Cyan header */
+    color: #0d0d0d; /* Dark text on bright header */
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.contact-form-close-btn {
+    background: none;
+    border: none;
+    color: #0d0d0d;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.contact-form-close-btn:hover {
+    color: #333;
+}
+
+.contact-form {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-input,
+.form-textarea {
+    padding: 12px;
+    border: 1px solid #00cccc; /* Cyan border */
+    border-radius: 8px;
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    outline: none;
+    font-size: 1em;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #888;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: #00ffff; /* Brighter cyan on focus */
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-submit-btn {
+    background-color: #00cccc; /* Cyan submit button */
+    color: #0d0d0d;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    align-self: flex-end;
+}
+
+.form-submit-btn:hover {
+    background-color: #00ffff; /* Brighter cyan on hover */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+.form-submit-btn:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.form-status {
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    color: #64ffda; /* Greenish cyan */
+}
+
+.error-message {
+    color: #e54e5f; /* Pinkish red */
+}
+
+.sending-message {
+    color: #00ffff; /* Cyan */
+}
+
+.contact-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.contact-modal {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.close-button:hover {
+  opacity: 1;
+}
+
+.contact-modal h2 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4a9eff;
+  box-shadow: 0 0 0 2px rgba(74, 158, 255, 0.2);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background: #4a9eff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  background: #357abd;
+  transform: translateY(-1px);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+.status-message {
+  margin: 1rem 0;
+  padding: 0.8rem;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.status-message.success {
+  background: rgba(46, 213, 115, 0.1);
+  color: #2ed573;
+  border: 1px solid rgba(46, 213, 115, 0.2);
+}
+
+.status-message.error {
+  background: rgba(255, 71, 87, 0.1);
+  color: #ff4757;
+  border: 1px solid rgba(255, 71, 87, 0.2);
+}
+
+.status-message.loading {
+  background: rgba(74, 158, 255, 0.1);
+  color: #4a9eff;
+  border: 1px solid rgba(74, 158, 255, 0.2);
+} 

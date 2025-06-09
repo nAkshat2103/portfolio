@@ -1,0 +1,61 @@
+Profile
+ Akshat Nigam
+ +91 6307177166 | nakshat2103@gmail.com
+ Passionate Computer Science undergraduate with a strong foundation in AI, Machine Learning, and full-stack
+ development. Skilled in Retrieval-Augmented Generation (RAG), Agentic AI, and Large Language
+ Models, with a track record of designing impactful solutions. Experienced in developing AI-driven applications,
+ analyzing complex data, and integrating cutting-edge frameworks. Enthusiastic about leveraging technology to drive
+ social impact, enhance decision-making, and build scalable, user-centric solutions..
+ Education
+ Thapar Institute of Engineering and Technology
+ Bachelor’s of Technology in Computer Science and Business System
+ Swaraj India Public School
+ Indian School Certificate
+ Courses and Certifications
+ Patiala, Punjab
+ Sep 2022- Present
+ Kanpur, Uttar Pradesh
+ 2020- 2022
+ Data Analysis with Python
+ Certificate Link
+ Natural Language Processing
+ Certificate Link
+ Projects
+ IBM
+ Grade: 92%
+ DeepLearning.AI
+ Grade: 97.72%
+ Backdoor Attacks Detection Using Neural Networks | Python, TensorFlow
+ August,2023- October,2023
+ • Identified and analyzed common techniques used by attackers to implant backdoors in machine-learning
+ models
+ • Augumented a dataset with over 42000 images classified in 9 different categories of backdoor attacks
+ • Developed highly accurate Deep Learning model that can detect various types of Backdoor Attacks on Machine
+ Learning models with a high degree of Precision and Recall
+ • Obtained a max Precision of 98.06 Percent by using Transfer Learning technique on VGG-16 model
+ Medical AI Chatbot | Python, Langchain
+ February, 2024- April,2024
+ • Built a chatbot using LangChain, FAISS, and LLama-2 to answer medical queries with accuracy.
+ • Embedded medical PDFs using HuggingFace models and stored them in a FAISS vector database for efficient
+ search.
+ • Integrated Chainlit to create a user-friendly chatbot experience with real-time query handling and source tracking.
+ Twitter Sentiment Analysis Dashboard | Python, Selenium, HuggingFace
+ October, 2024
+ • Developed a real-time Twitter analysis platform that scrapes tweets using Selenium and provides actionable
+ insights on user-selected topics.
+ • Integrated HuggingFace Transformers to gauge user sentiment, RAG (Retrieval-Augmented Generation)
+ for summarizing large sets of tweets effectively, and LDA (Latent Dirichlet Allocation) for advance topic
+ modeling, categorizing tweets into themes.
+ • Built an interactive dashboard to visualize user engagement metrics, trending topics, sentiment analysis, and
+ topic-specific summaries.
+ • Demonstrated use cases such as brand monitoring, competitor analysis, and issue categorization with data-driven
+ visualizations.
+ Technical Skills
+ Languages: HTML/CSS, Python, Java, JavaScript, SQL
+ Frameworks: SKlearn, TensorFlow, HuggingFace, React, SpringBoot, Langchain,CrewAI
+ Tech Stack: Data Science, Deep Learning, Generative AI, Full-Stack Development, DSA, Agentic AI
+ Achievements
+ SatHack 2024: 1st Place in Open Innovation category.
+ Amazon ML Challenge 2024: All-India Rank 273 among 80,000+ participants.
+ Adobe Gen AI Hackathon 2024: Ranked top 5% nationwide.
+ Scholarship: Merit scholarship at Thapar Institute of Engineering and Technology
