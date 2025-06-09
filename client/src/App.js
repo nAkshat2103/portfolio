@@ -97,7 +97,7 @@ function App() {
             <p className="location-title">Thapar University</p>
             <p className="expertise-title">Studying Computer Science and <br/> Business Systems</p>
             <p className="description">I am a Computer Science and Business Systems student currently seeking opportunities for jobs and internships. Let's connect!</p>
-            <a href="/api/download-cv" className="download-cv" download>Download CV ↓</a>
+            <a href="/download-cv" className="download-cv" download>Download CV ↓</a>
             <div className="lets-chat" onClick={toggleChatbot}>
               <span>Let's Chat</span>
             </div>

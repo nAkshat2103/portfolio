@@ -1,7 +1,17 @@
 {
+  "name": "portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "start": "cd server && npm start",
+    "build": "cd client && npm run build",
+    "dev": "concurrently \"cd server && npm start\" \"cd client && npm start\""
+  },
   "dependencies": {
-    "dotenv": "^16.5.0",
-    "mongoose": "^8.15.1",
-    "react-router-dom": "^7.6.2"
+    "concurrently": "^8.2.2"
   }
 }
