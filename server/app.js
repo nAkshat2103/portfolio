@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -10,6 +11,12 @@ var chatbotRouter = require('./routes/chatbot');
 var contactRouter = require('./routes/contact');
 
 var app = express();
+
+// Enable CORS for Vercel frontend
+app.use(cors({
+  origin: 'portfolio-xi-sandy-6ghkwmxtkw.vercel.app', // TODO: Replace with your actual Vercel URL
+  credentials: true
+}));
 
 app.use(logger('dev'));
 app.use(express.json());
