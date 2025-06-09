@@ -1,5 +1,8 @@
+
+
+
 const config = {
-  apiUrl: process.env.REACT_APP_API_URL || 'http://localhost:3000'
+  apiUrl: "https://portfolio-1-lnpk.onrender.com"
 };
 
-export default config; 
+export default config;
