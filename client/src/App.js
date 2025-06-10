@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import ProjectsPage from './ProjectsPage';
 import Chatbot from './Chatbot';
