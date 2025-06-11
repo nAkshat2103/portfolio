@@ -87,10 +87,43 @@ function App() {
       const vh = window.innerHeight;
       if (scrollY > vh * 0.25) {
         if (projectsRef.current) {
+          const projectCards = projectsRef.current.querySelectorAll('.project-card');
+          
+          // Set initial state with 3D transforms
+          projectCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = `
+              perspective(1000px)
+              translateY(${150 + (index * 80)}px)
+              translateZ(-100px)
+              rotateX(45deg)
+              scale(0.6)
+            `;
+            card.style.transition = 'all 1.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+            card.style.filter = 'blur(15px) brightness(0.8)';
+            card.style.transformOrigin = 'center center';
+          });
+
           projectsRef.current.scrollIntoView({ 
             behavior: 'smooth',
             block: 'start'
           });
+
+          // Animate each card with enhanced stagger effect
+          projectCards.forEach((card, index) => {
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = `
+                perspective(1000px)
+                translateY(0)
+                translateZ(0)
+                rotateX(0)
+                scale(1)
+              `;
+              card.style.filter = 'blur(0) brightness(1)';
+            }, 300 * index);
+          });
+
           setAutoScrolled(true);
           setTimeout(() => {
             setShowProjects(true);
@@ -108,8 +141,34 @@ function App() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            const projectCards = entry.target.querySelectorAll('.project-card');
+            projectCards.forEach((card, index) => {
+              setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = `
+                  perspective(1000px)
+                  translateY(0)
+                  translateZ(0)
+                  rotateX(0)
+                  scale(1)
+                `;
+                card.style.filter = 'blur(0) brightness(1)';
+              }, 300 * index);
+            });
             setShowProjects(true);
           } else {
+            const projectCards = entry.target.querySelectorAll('.project-card');
+            projectCards.forEach((card, index) => {
+              card.style.opacity = '0';
+              card.style.transform = `
+                perspective(1000px)
+                translateY(${150 + (index * 80)}px)
+                translateZ(-100px)
+                rotateX(45deg)
+                scale(0.6)
+              `;
+              card.style.filter = 'blur(15px) brightness(0.8)';
+            });
             setShowProjects(false);
           }
         });
@@ -121,6 +180,20 @@ function App() {
     );
 
     if (projectsRef.current) {
+      const projectCards = projectsRef.current.querySelectorAll('.project-card');
+      projectCards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = `
+          perspective(1000px)
+          translateY(${150 + (index * 80)}px)
+          translateZ(-100px)
+          rotateX(45deg)
+          scale(0.6)
+        `;
+        card.style.transition = 'all 1.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        card.style.filter = 'blur(15px) brightness(0.8)';
+        card.style.transformOrigin = 'center center';
+      });
       observer.observe(projectsRef.current);
     }
 
