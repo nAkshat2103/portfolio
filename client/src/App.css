@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
   min-height: 100vh;
@@ -387,17 +391,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 0px; /* Reduced from 40px */
+  padding-top: 120px; /* Increased from 0px to move content down */
   overflow: hidden;
-  padding: 0px 20px 0 20px; /* Adjusted top padding */
+  padding: 120px 20px 0 20px; /* Increased top padding */
 }
 
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   max-width: 1200px;
-  margin-top: 0px; /* Reduced from 10px */
+  min-height: 70vh;
+  margin: 0 auto;
   position: relative;
   z-index: 1;
 }
@@ -634,402 +640,153 @@
   justify-content: center;
 }
 
-.project-card {
-  background: #23272f;
-  color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 0 16px #00ffd0aa, 0 0 4px #00aaff77;
-  padding: 24px 32px;
-  min-width: 220px;
-  font-size: 1.1rem;
-  font-weight: 500;
-  transition: transform 0.2s, box-shadow 0.2s;
-  cursor: pointer;
-  animation: fadeInUp 1.2s;
-}
-
-.project-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 32px #00ffd0, 0 0 16px #00aaff;
-}
-
-.skill-badge {
-  background: linear-gradient(90deg, #00ffd0 0%, #00aaff 100%);
-  color: #181a20;
-  border-radius: 20px;
-  padding: 10px 22px;
-  font-weight: 600;
-  font-size: 1rem;
-  margin: 6px;
-  box-shadow: 0 0 10px #00ffd0, 0 0 20px #00aaff;
-  animation: glowSkill 2s infinite alternate;
-}
-
-@keyframes glowSkill {
-  0% { box-shadow: 0 0 10px #00ffd0, 0 0 20px #00aaff; }
-  100% { box-shadow: 0 0 20px #00ffd0, 0 0 40px #00aaff; }
-}
-
-.accomplishment-card {
-  background: #23272f;
-  color: #fff;
-  border-left: 6px solid #00ffd0;
-  border-radius: 12px;
-  padding: 18px 28px;
-  min-width: 200px;
-  font-size: 1.05rem;
-  margin-bottom: 12px;
-  box-shadow: 0 0 12px #00ffd0aa;
-  animation: fadeInUp 1.3s;
-}
-
-.abstract-visual-element {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: linear-gradient(45deg, rgba(0, 255, 255, 0.2), rgba(100, 0, 255, 0.2)); /* Subtle gradient */
-  border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%; /* Organic shape */
-  top: 30%;
-  left: 20%;
-  filter: blur(80px); /* Subtle blur */
-  opacity: 0.4; /* Low opacity */
-  z-index: 1; /* Ensure it's above the main glows but below content */
-  animation: morphShape 20s infinite ease-in-out alternate;
-}
-
-@keyframes morphShape {
-    0% {
-        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
-        transform: translate(0, 0) rotate(0deg) scale(1);
-    }
-    33% {
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-        transform: translate(30px, 20px) rotate(120deg) scale(1.1);
-    }
-    66% {
-        border-radius: 30% 70% 60% 40% / 50% 60% 30% 60%;
-        transform: translate(-20px, 40px) rotate(240deg) scale(0.9);
-    }
-    100% {
-        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
-        transform: translate(0, 0) rotate(360deg) scale(1);
-    }
-}
-
-/* Add a subtle pulse effect to the background */
-.App::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
-    animation: pulse 8s infinite ease-in-out;
-    pointer-events: none;
-}
-
-@keyframes pulse {
-    0% { opacity: 0.3; }
-    50% { opacity: 0.5; }
-    100% { opacity: 0.3; }
-}
-
-/* Add new floating elements */
-.floating-element {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    pointer-events: none;
-    animation: float 15s infinite ease-in-out;
-}
-
-.floating-element:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
-.floating-element:nth-child(2) { top: 40%; left: 80%; animation-delay: 2s; }
-.floating-element:nth-child(3) { top: 60%; left: 30%; animation-delay: 4s; }
-.floating-element:nth-child(4) { top: 30%; left: 60%; animation-delay: 6s; }
-.floating-element:nth-child(5) { top: 70%; left: 20%; animation-delay: 8s; }
-
-@keyframes float {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    25% { transform: translate(50px, -50px) rotate(90deg); }
-    50% { transform: translate(100px, 0) rotate(180deg); }
-    75% { transform: translate(50px, 50px) rotate(270deg); }
-    100% { transform: translate(0, 0) rotate(360deg); }
-}
-
-/* Top Decoration Styles */
-.top-decoration {
-  position: relative;
-  width: 100%;
-  height: 120px;
+.projects-section {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 20px;
-  overflow: hidden;
-}
-
-.header-line {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    rgba(0, 255, 208, 0.3) 20%, 
-    rgba(0, 255, 208, 0.5) 50%, 
-    rgba(0, 255, 208, 0.3) 80%, 
-    transparent 100%
-  );
-  animation: pulseLine 3s infinite ease-in-out;
-}
-
-.header-dots {
+  margin-top: 0;
+  padding-bottom: 48px;
   position: relative;
-  display: flex;
-  gap: 15px;
-  margin: 10px 0;
+  z-index: 2;
 }
 
-.header-dots span {
-  width: 8px;
-  height: 8px;
-  background: rgba(0, 255, 208, 0.6);
-  border-radius: 50%;
-  animation: pulseDot 2s infinite ease-in-out;
-}
-
-.header-dots span:nth-child(2) {
-  animation-delay: 0.3s;
-}
-
-.header-dots span:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
-.header-text {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-top: 15px;
-  animation: fadeInDown 1s ease-out;
-}
-
-@keyframes pulseLine {
-  0% { opacity: 0.3; transform: scaleX(0.95); }
-  50% { opacity: 0.7; transform: scaleX(1.05); }
-  100% { opacity: 0.3; transform: scaleX(0.95); }
-}
-
-@keyframes pulseDot {
-  0% { transform: scale(1); opacity: 0.6; }
-  50% { transform: scale(1.3); opacity: 1; }
-  100% { transform: scale(1); opacity: 0.6; }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.projects-section {
+.projects-section h2 {
+  font-size: 3em;
+  color: #00ffff;
+  text-align: center;
+  margin-bottom: 48px;
+  text-shadow: none;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.6));
   opacity: 0;
-  transform: translateY(100px); /* Start off-screen */
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out 0.3s, transform 1s ease-out 0.3s;
 }
 
-.projects-section.show {
+.projects-section.show h2 {
   opacity: 1;
-  transform: translateY(0); /* Bring into view */
+  transform: translateY(0);
 }
 
-/* Styles to dim/hide background animation when on Projects Page */
-/* body.projects-page-active .background-animation-container {
-    opacity: 0.1;
-    backdrop-filter: blur(20px);
-    transition: opacity 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px 48px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  justify-items: stretch;
+  align-items: stretch;
 }
 
-body.projects-page-active .background-animation-container div {
-    animation-play-state: paused;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-*/
-
-/* Add styles and animations for new glow elements */
-.background-glow-6 {
-    width: 550px;
-    height: 550px;
-    background: rgba(100, 0, 255, 0.6); /* Bright Purple */
-    top: 50%;
-    left: 5%;
-    animation: backgroundMove6 30s infinite alternate ease-in-out;
-    animation-delay: 6s;
+.projects-section.show .projects-grid {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.background-glow-7 {
-    width: 400px;
-    height: 400px;
-    background: rgba(0, 255, 170, 0.6); /* Another Bright Cyan/Green */
-    bottom: 5%;
-    right: 5%;
-    animation: backgroundMove7 24s infinite alternate ease-in-out;
-    animation-delay: 12s;
+.project-card {
+  background: rgba(10, 12, 20, 0.92); /* solid dark background with slight opacity */
+  border: 1.5px solid rgba(0, 255, 255, 0.3);
+  border-radius: 18px;
+  padding: 34px 27px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 187px;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  /* Remove or override previous background-image to ensure solid background */
+  background-image: none;
 }
 
-@keyframes backgroundMove6 {
-    0% { transform: translate(0, 0) scale(1.1) rotate(0deg); opacity: 0.3; }
-    50% { transform: translate(80px, 150px) scale(1.2) rotate(180deg); opacity: 0.5; }
-    100% { transform: translate(0, 0) scale(1.1) rotate(360deg); opacity: 0.3; }
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.8), 0 0 40px rgba(128, 0, 128, 0.8);
 }
 
-@keyframes backgroundMove7 {
-    0% { transform: translate(0, 0) scale(1.2) rotate(0deg); opacity: 0.3; }
-    50% { transform: translate(-150px, -80px) scale(1.1) rotate(-180deg); opacity: 0.5; }
-    100% { transform: translate(0, 0) scale(1.2) rotate(-360deg); opacity: 0.3; }
+.project-card::before {
+  display: none !important;
 }
 
-/* Add styles and animations for new glow elements */
-.background-glow-8 {
-    width: 480px;
-    height: 480px;
-    background: rgba(255, 50, 150, 0.6); /* Bright Pink */
-    top: 60%;
-    left: 40%;
-    animation: backgroundMove8 26s infinite alternate ease-in-out;
-    animation-delay: 8s;
+.project-info {
+  text-align: left; /* Ensure text within project-info is left-aligned */
+  width: 100%;
 }
 
-.background-glow-9 {
-    width: 380px;
-    height: 380px;
-    background: rgba(50, 200, 255, 0.6); /* Light Blue */
-    bottom: 10%;
-    left: 45%;
-    animation: backgroundMove9 20s infinite alternate ease-in-out;
-    animation-delay: 14s;
+.project-name {
+  font-size: 1.8em;
+  color: #00ffff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
 }
 
-@keyframes backgroundMove8 {
-    0% { transform: translate(0, 0) scale(1); opacity: 0.3; }
-    50% { transform: translate(100px, -100px) scale(1.1); opacity: 0.5; }
-    100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+.project-tagline {
+  font-size: 1.1em;
+  color: #c0c0c0;
+  margin-bottom: 15px;
 }
 
-@keyframes backgroundMove9 {
-    0% { transform: translate(0, 0) scale(1); opacity: 0.3; }
-    50% { transform: translate(-100px, 100px) scale(1.05); opacity: 0.5; }
-    100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+.project-badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto; /* Push badges to the bottom */
 }
 
-/* Add styles and animations for new glow elements */
-.background-glow-10 {
-    width: 500px;
-    height: 500px;
-    background: rgba(255, 165, 0, 0.6); /* Bright Orange */
-    top: 15%;
-    left: 30%;
-    animation: backgroundMove10 24s infinite alternate ease-in-out;
-    animation-delay: 3s;
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
-.background-glow-11 {
-    width: 420px;
-    height: 420px;
-    background: rgba(0, 255, 255, 0.6); /* Cyan */
-    bottom: 20%;
-    right: 30%;
-    animation: backgroundMove11 27s infinite alternate ease-in-out;
-    animation-delay: 9s;
+.tech-badge {
+  background-color: rgba(0, 255, 255, 0.2);
+  color: #00ffff;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  border: 1px solid rgba(0, 255, 255, 0.5);
+  transition: background-color 0.3s ease;
 }
 
-@keyframes backgroundMove10 {
-    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.3; }
-    50% { transform: translate(80px, -80px) scale(1.1) rotate(90deg); opacity: 0.5; }
-    100% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.3; }
+.tech-badge:hover {
+  background-color: rgba(0, 255, 255, 0.4);
 }
 
-@keyframes backgroundMove11 {
-    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.3; }
-    50% { transform: translate(-80px, 80px) scale(1.1) rotate(-90deg); opacity: 0.5; }
-    100% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.3; }
+/* Ensure the background animation is always visible on the landing page */
+body.modal-active .background-animation-container {
+  filter: brightness(0.3);
+  /* opacity: 0; */ /* Removed this to prevent complete removal */
+  /* display: none; */ /* Removed this to prevent complete removal */
 }
 
-/* Add styles and animations for new glow elements */
-.background-glow-12 {
-    width: 520px;
-    height: 520px;
-    background: rgba(200, 50, 255, 0.6); /* Purple */
-    top: 40%;
-    left: 60%;
-    animation: backgroundMove12 32s infinite alternate ease-in-out;
-    animation-delay: 5s;
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 32px 0;
+    max-width: 98vw;
+  }
+  .project-card {
+    max-width: 95vw;
+    padding: 32px 12px;
+  }
 }
 
-.background-glow-13 {
-    width: 300px;
-    height: 300px;
-    background: rgba(0, 255, 50, 0.6); /* Bright Green */
-    bottom: 30%;
-    right: 40%;
-    animation: backgroundMove13 28s infinite alternate ease-in-out;
-    animation-delay: 11s;
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
 }
 
-@keyframes backgroundMove12 {
-    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.3; }
-    50% { transform: translate(-100px, 50px) scale(1.2) rotate(120deg); opacity: 0.5; }
-    100% { transform: translate(0, 0) scale(1) rotate(240deg); opacity: 0.3; }
-}
-
-@keyframes backgroundMove13 {
-    0% { transform: translate(0, 0) scale(1.1) rotate(0deg); opacity: 0.3; }
-    50% { transform: translate(50px, -100px) scale(1.05) rotate(-150deg); opacity: 0.5; }
-    100% { transform: translate(0, 0) scale(1.1) rotate(-300deg); opacity: 0.3; }
-}
-
-/* Add styles and animations for new glow elements */
-.background-glow-14 {
-    width: 400px;
-    height: 400px;
-    background: rgba(255, 0, 255, 0.6); /* Magenta/Fuchsia */
-    top: 55%;
-    left: 15%;
-    animation: backgroundMove14 29s infinite alternate ease-in-out;
-    animation-delay: 7s;
-}
-
-.background-glow-15 {
-    width: 350px;
-    height: 350px;
-    background: rgba(0, 255, 100, 0.6); /* Bright Green */
-    bottom: 40%;
-    right: 15%;
-    animation: backgroundMove15 23s infinite alternate ease-in-out;
-    animation-delay: 13s;
-}
-
-@keyframes backgroundMove14 {
-    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.3; }
-    50% { transform: translate(150px, 80px) scale(1.1) rotate(180deg); opacity: 0.5; }
-    100% { transform: translate(0, 0) scale(1) rotate(360deg); opacity: 0.3; }
-}
-
-@keyframes backgroundMove15 {
-    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.3; }
-    50% { transform: translate(-120px, -100px) scale(1.15) rotate(-180deg); opacity: 0.5; }
-    100% { transform: translate(0, 0) scale(1) rotate(-360deg); opacity: 0.3; }
+.projects-section.show.fade-in-section {
+  opacity: 1;
+  transform: translateY(0);
 }
